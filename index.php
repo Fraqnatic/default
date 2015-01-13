@@ -4,7 +4,8 @@
 //Задание 1
 $name = "Алексей";
 $age  = 25;
-echo "Меня зовут $name <br /> Мне $age лет <br />";
+echo "Меня зовут $name <br /> ";
+echo "Мне $age лет <br />";
 unset($name);
 unset($age);
 
