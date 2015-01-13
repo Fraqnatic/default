@@ -51,7 +51,7 @@ $books = [$book1, $book2];
 $myecho = sprintf('Недавно я прочитал книги %s и %s, '. 
     'написанные соответственно авторами %s и %s, '.
     'я осилил в сумме %s страниц, не ожидал от себя подобного.',
-        $books[0]['title1'],   $books[1]['title2'],
+        $books[0]['title1'],  $books[1]['title2'],
         $books[0]['author1'], $books[1]['author2'],
         $books[0]['pages1'] + $books[1]['pages2']);
 echo $myecho;
