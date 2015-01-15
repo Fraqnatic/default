@@ -3,13 +3,14 @@
 
 // Формируем массив с произвольными датами
 $date = [
-    date(rand(1, time())),
-    date(rand(1, time())),
-    date(rand(1, time())),
-    date(rand(1, time())),
-    date(rand(1, time())),
+      rand(1, time()),
+      rand(1, time()),
+      rand(1, time()),
+      rand(1, time()),
+      rand(1, time()),
 ];
-
+echo $date[0];
+echo '<br/>';
 // Ищем минимальный день среди всех дат
 echo 'Минимальный день: ';
 echo min(date('d', $date[0]),
