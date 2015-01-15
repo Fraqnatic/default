@@ -12,8 +12,6 @@ $date = [
 
 // Ищем минимальный день среди всех дат
 echo 'Минимальный день: ';
-echo 'День-'.date('d', $date[0]);
-echo '<br/>';
 echo min(date('d', $date[0]),
          date('d', $date[1]),
          date('d', $date[2]),
