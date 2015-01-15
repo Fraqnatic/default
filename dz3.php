@@ -3,11 +3,11 @@
 
 // Формируем массив с произвольными датами
 $date = [
-    date('d.m.Y', rand(time(), 1)),
-    date('d.m.Y', rand(time(), 1)),
-    date('d.m.Y', rand(time(), 1)),
-    date('d.m.Y', rand(time(), 1)),
-    date('d.m.Y', rand(time(), 1)),
+    date('d.m.Y', rand(1, time())),
+    date('d.m.Y', rand(1, time())),
+    date('d.m.Y', rand(1, time())),
+    date('d.m.Y', rand(1, time())),
+    date('d.m.Y', rand(1, time())),
 ];
 
 // Ищем минимальный день среди всех дат
