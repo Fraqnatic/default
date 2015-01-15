@@ -3,54 +3,35 @@
 
 // Формируем массив с произвольными датами
 $date = [
-    date('d.m.Y', rand(1, time())),
-    date('d.m.Y', rand(1, time())),
-    date('d.m.Y', rand(1, time())),
-    date('d.m.Y', rand(1, time())),
-    date('d.m.Y', rand(1, time())),
+    date(rand(1, time())),
+    date(rand(1, time())),
+    date(rand(1, time())),
+    date(rand(1, time())),
+    date(rand(1, time())),
 ];
 
 // Ищем минимальный день среди всех дат
 echo 'Минимальный день: ';
-echo min(substr($date[0], 0, 2),
-         substr($date[1], 0, 2),
-         substr($date[2], 0, 2),
-         substr($date[3], 0, 2),
-         substr($date[4], 0, 2)
+echo 'День-'.date('d', $date[0]);
+echo '<br/>';
+echo min(date('d', $date[0]),
+         date('d', $date[1]),
+         date('d', $date[2]),
+         date('d', $date[3]),
+         date('d', $date[4])
     );
 echo '<br/>';
 
 // Ищем максимальный месяц среди всех дат
 echo 'Максимальный месяц: ';
-echo max(substr($date[0], 3, 2),
-         substr($date[1], 3, 2),
-         substr($date[2], 3, 2),
-         substr($date[3], 3, 2),
-         substr($date[4], 3, 2)
+echo max(date('m', $date[0]),
+         date('m', $date[1]),
+         date('m', $date[2]),
+         date('m', $date[3]),
+         date('m', $date[4])
     );
 echo '<br/>';
 
-// Переводим даты из строкового формата в юниксовую метку числового
-// для того, чтобы можно было эти даты отсортировать
-$date[0] = mktime(0, 0, 0, substr($date[0], 3, 2),
-                           substr($date[0], 0, 2),
-                           substr($date[0], 6, 4));
-
-$date[1] = mktime(0, 0, 0, substr($date[1], 3, 2),
-                           substr($date[1], 0, 2),
-                           substr($date[1], 6, 4));
-
-$date[2] = mktime(0, 0, 0, substr($date[2], 3, 2),
-                           substr($date[2], 0, 2),
-                           substr($date[2], 6, 4));
-
-$date[3] = mktime(0, 0, 0, substr($date[3], 3, 2),
-                           substr($date[3], 0, 2),
-                           substr($date[3], 6, 4));
-
-$date[4] = mktime(0, 0, 0, substr($date[4], 3, 2),
-                           substr($date[4], 0, 2),
-                           substr($date[4], 6, 4));
 sort($date);
 
 // Вытаскиваем последний элемент массива и ложим в переменную
