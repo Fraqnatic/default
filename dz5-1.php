@@ -22,7 +22,7 @@ $news = explode("\n", $news);
 function get_all($news)
 {
 	foreach ($news as $key => $value) {
-		echo '<a href=?id='.($key+1).'>'.$value.'</a><br/>';
+		echo '<a href=?id=\"'.($key+1).'\">'.$value.'</a><br/>';
 	}
 }
 
@@ -31,9 +31,9 @@ function getNewsById($id)
 {
 	global $news;
 
-	echo '<a href=?id='.$id.'>'.$news[$id-1].'</a><br/>';
+	echo '<a href=?id=\"'.$id.'\">'.$news[$id-1].'</a><br/>';
 	
-	echo '<a href='.mainNews.'>Все новости</a>';
+	echo '<a href=\"'.mainNews.'\">Все новости</a>';
 }
 
 
@@ -54,7 +54,7 @@ if(isset($_GET['id']) && !empty($_GET['id']))
 	{
 		header('HTTP/1.0 404 NOT FOUND');	
 		echo '<h3>Страница с такой новостью не найдена, попробуйте поискать другую</h3><br/>';
-		echo '<a href='.mainNews.'>Все новости';
+		echo '<a href=\"'.mainNews.'\">Все новости';
 	}
 }
 

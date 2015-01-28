@@ -33,7 +33,7 @@ function getNewsById($id)
 
 	echo $news[$id-1].'<br/>';
 	
-	echo '<a href='.mainNews.'>Все новости</a>';
+	echo '<a href=\"'.mainNews.'\">Все новости</a>';
 }
 
 
@@ -54,7 +54,7 @@ if(isset($_POST['id']) && !empty($_POST['id']))
 	{
 		header('HTTP/1.0 404 NOT FOUND');	
 		echo '<h3>Страница с такой новостью не найдена, попробуйте по искать другую</h3><br/>';
-		echo '<a href='.mainNews.'>Все новости';
+		echo '<a href=\"'.mainNews.'\">Все новости';
 	}
 }
 
@@ -69,7 +69,7 @@ else
 <html>
 <head></head>
 <body>
-	<form method="POST" action=<?php mainNews ?> >
+	<form method="POST" action="<?php mainNews ?>">
 		<p>
 			<input type="text" name="id" value="" />
 			<input type="submit" value="Показать" />
