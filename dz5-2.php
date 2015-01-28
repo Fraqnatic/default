@@ -41,7 +41,7 @@ function getNewsById($id)
 // Если параметр id в запросе POST есть
 if(isset($_POST['id']) && !empty($_POST['id']))
 {
-	$id = $_POST['id'] * 1; // Если id было отрицательным
+	$id = abs($_POST['id']); // Если id было отрицательным
 	 
 	// Проверяем чтобы номер новости был в массиве
 	if ($id <= count($news))

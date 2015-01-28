@@ -41,7 +41,7 @@ function getNewsById($id)
 // Если параметр id в запросе GET есть
 if(isset($_GET['id']) && !empty($_GET['id']))
 {
-	$id = $_GET['id'] * 1; // Если id было отрицательным
+	$id = abs($_GET['id']); // Если id было отрицательным
 	 
 	// Проверяем чтобы номер новости был в массиве
 	if ($id <= count($news))
