@@ -86,8 +86,7 @@ if(isset($_GET['edit']) && $_GET['edit'] == true)
         >
     <br/>
     
-    <label for="region">Город</label> 
-    
+    <label for="region">Город</label>  
     
     <?php
     // Вывод Города
@@ -146,7 +145,6 @@ if(isset($_GET['edit']) && $_GET['edit'] == true)
 </form>
 
 <?php 
-// Точка входа
 // Если страница открыта в результате POST запроса
 // то добавляем новое объявление
 if($_SERVER['REQUEST_METHOD'] == 'POST')
